@@ -1,0 +1,15 @@
+#! /bin/bash
+
+INTERFACE="wlp2s0b1"
+
+while true; do
+	BATTERY="$(cat /sys/class/power_supply/BAT0/capacity)"
+	VOLUME="$(amixer get Master | awk 'NR==5 { print $4 }' | sed 's/[^0-9]*//g')"
+	RAM="$(free -h | awk 'NR==2 { print $3 }')"
+	IP="$(networkctl status $INTERFACE | awk 'NR==11 { print $2 }')"
+	TIME="$(date +%d\ %B\ %Y,\ %H:%M)"
+
+	xsetroot -name " bat: $BATTERY% | vol: $VOLUME% | ram: $RAM | ip: $IP | $TIME "
+
+	sleep 5s
+done
