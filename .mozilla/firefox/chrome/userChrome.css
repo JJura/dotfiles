@@ -1,0 +1,8 @@
+.tab-text, #urlbar {
+    font-family: Terminus !important;
+    font-size: 12px !important;
+}
+
+.tab-line {
+    display: none !important;
+}
