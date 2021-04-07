@@ -21,6 +21,7 @@
 - git
 - gcc
 - make
+- compton
 
 ================================================================================
 2. Network config:
@@ -42,10 +43,10 @@ DHCP=yes
 ================================================================================
 3. User groups:
 ================================================================================
-# usermod -aG sudo lucas
-# usermod -aG audio lucas
-# usermod -aG video lucas
-# usermod -aG input lucas
+# usermod -aG sudo <user>
+# usermod -aG audio <user>
+# usermod -aG video <user>
+# usermod -aG input <user>
 
 ================================================================================
 4. Audio config:
