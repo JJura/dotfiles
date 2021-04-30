@@ -8,6 +8,7 @@
 - systemd-sysv
 - xserver-xorg-core
 - xserver-xorg-legacy
+- xserver-xorg-video-intel
 - xserver-xorg-input-libinput
 - x11-xserver-utils
 - xinit
